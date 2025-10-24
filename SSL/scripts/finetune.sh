@@ -1,9 +1,9 @@
 #! /usr/bin/bash
-export CUDA_VISIBLE_DEVICES=0,1,2,3
+export CUDA_VISIBLE_DEVICES=0
 
 python zipformer_fbank/finetune.py \
-    --world-size 4 \
-    --num-epochs 300 \
+    --world-size 1 \
+    --num-epochs 10 \
     --start-epoch 1 \
     --use-fp16 1 \
     --sample-rate 100 \
